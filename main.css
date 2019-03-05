@@ -1,0 +1,565 @@
+* {
+    box-sizing: border-box
+}
+
+#app-container{
+    
+}
+
+body {
+    background-color: black;
+    background-image: url("./pictures/main-image.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+    z-index: 12;
+    overflow: auto;
+    display: none;
+}
+
+/* CARD FOR HOLDING NEON SIGN */
+
+.cards.splash-card {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    top: 100px;
+    height: 100px;
+    font-size: 3em;
+    border: none;
+    margin-top: 100px;
+}
+
+
+
+
+/* MAIN NAV BAR */
+
+
+.navbar {
+    background-color: rgba(53, 53, 53, 0.76);
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 0px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 12;
+
+    font-weight: bold
+}
+
+.navbar ul {
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    width: 100vw;
+    text-align: center;
+}
+
+.navbar ul li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    width: 100px;
+    font-size: 1.5em;
+    align-content: space-around;
+}
+
+.navbar ul li:hover {
+    background-color: white;
+    color: black;
+    border-radius: 2px;
+    cursor: pointer
+}
+
+.navbar ul li:first-child {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    color: rgba(255, 255, 0, 0.733);
+    width: 250px;
+    font-size: 1.5em;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+.navbar ul li:first-child:hover {
+    color:black;
+}
+
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(66, 66, 66, 0);
+    position: absolute;
+    bottom: 0;
+}
+
+.progress-bar {
+    margin-top:4px;
+    height: 4px;
+    background: white;
+    width: 0%;
+}
+
+/* END MAIN NAVBAR */
+
+/* MOBILE NAV - USED TO HIDE FROM DESKTOP VIEW */
+#mobile-nav {
+    display: none;
+}
+
+
+
+/* SCROLL INDICATION ICON W KEYFRAMES */
+
+#scroll-icon {
+    background-color: rgba(128, 128, 128, 0.692);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("./pictures/scroll-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    animation: flash 2s, move 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+    0% {
+        background-color: #fcf2e80e;
+    }
+
+    25% {
+        background-color: #fcf2e84d;
+    }
+
+    75% {
+        background-color: #fcf2e80e;
+    }
+
+    100% {
+        background-color: #fcf2e80e;
+    }
+}
+
+
+@-webkit-keyframes flash {
+    0% {
+        background-color: #fcf2e80e;
+    }
+
+    25% {
+        background-color: #fcf2e88f;
+    }
+
+    75% {
+        background-color: #fcf2e80e;
+    }
+
+    100% {
+        background-color: #fcf2e80e
+    }
+}
+
+@keyframes move {
+    0% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 30px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+
+@-webkit-keyframes move {
+    0% {
+        margin-top: 0;
+    }
+
+    25% {
+        margin-top: 10px;
+    }
+
+    75% {
+        margin-top: 20px;
+    }
+
+    100% {
+        margin-top: 30px;
+    }
+}
+
+/* END SCROLL INDICATION ICON W KEYFRAMES */
+
+
+
+/* HEADING FOR CONTENT IF JQUERY NOT SUPPORTED */
+.content-header {
+    font-size: 3.0em;
+    font-weight: bold;
+    text-align: center;
+    color: #69c52b;
+}
+
+/* JQUERY CLASS FOR NEON SIGN TEXT */
+.neon {
+    font-weight: normal
+}
+
+/* CARDS & CARDS CONTAINER*/
+
+.cards-container {
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.cards {
+    width: 40%;
+    height: 60vh;
+    background-color: rgba(85, 85, 85, 0.459);
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+
+
+/* BIO */
+.content {
+    background-color: rgba(85, 85, 85, 0.459);
+    width: 99vw;
+    height: 100vh;
+    margin: auto;
+    padding: 20px;
+    font-size:1.em;
+    position: relative;
+    top: 1000px;
+    background-image: url("./pictures/lightbulb-bio.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.bio-card {
+    padding: 10px;
+    width: 80%;
+    height:600px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color:rgba(128, 128, 128, 0.247); 
+    color: rgba(255, 255, 255, 0.719);
+    font-size: 2.0em;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-weight: normal;
+    overflow: auto
+}
+
+/* END BIO */
+
+
+
+/* APPS */
+.content2 {
+    background-color: rgba(85, 85, 85, 0.459);
+    width: 99vw;
+    height: 100vh;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    top: 1000px;
+    background-image: url("./pictures/apps-image.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* WEATHER CARD IN APPS */
+.weather-card {
+    background-image: url("./pictures/weather-card.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 2.0em;
+    font-weight: bold;
+}
+
+.weather-card:hover {
+    cursor: pointer;
+}
+
+/* LYRICS CARD IN APPS */
+
+.lyrics-card {
+    background-image: url("./pictures/lyrics-card.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 2.0em;
+    font-weight: bold;
+}
+
+.lyrics-card:hover {
+    cursor: pointer;
+}
+
+
+
+/* CONTACT */
+.content3 {
+    background-color: rgba(85, 85, 85, 0);
+    width: 99vw;
+    height: 100vh;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    top: 1000px;
+    background-image: url("https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contact-card{
+    background-color: rgba(85, 85, 85, 0);
+    border:none;
+    display:flex;
+  
+}
+
+.resume-icon-container{
+    font-weight: bold;
+    font-size: 1.5em;
+    color:white
+}
+
+.resume-icon{
+  background-color: white;
+  border-radius: 5px;
+  
+}
+
+.contact-icons{
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height:80px;
+    align-self:center;
+}
+
+.contact-icons-mobile{
+    display:none;
+}
+
+.contact-pictures{
+    height:60px;
+    width:60px;
+    margin:auto;
+
+}
+
+
+
+
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 25px;
+    width: 100%;
+    background-color: rgba(53, 53, 53, 0.904);
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+/* MOBILE VIEW WITH MEDIA QUERIES */
+
+
+
+
+@media(max-width:860px) {
+
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .bio-card{
+        font-size: 1.3em
+    }
+
+    /* HIDES DESKTOP NAVBAR */
+    .navbar {
+        display: none;
+    }
+
+    /* MOBILE NAVBAR */
+    #nav-dropdown {
+        background-color:rgba(53, 53, 53, 0.76);
+        width: 100%;
+        height: 80px;
+        position: relative;
+        top: 0px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 12;
+        font-weight: bold
+    }
+
+    /* NETWORKEDEVOLUTION ICON IN NAVBAR */
+    #mobile-brand {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: inline-block;
+        color: rgba(255, 255, 0, 0.733);
+        width: 250px;
+        font-size: 1.2em;
+        position: absolute;
+        top: 30px;
+        left: -50px;
+    }
+
+    /* DROP DOWN BUTTON */
+    #mobile-button {
+        position: absolute;
+        right: 20px;
+        color: rgba(255, 255, 0, 0.733);
+    }
+
+    #mobile-button:hover {
+        cursor: pointer
+    }
+
+    /* DROP DOWN MENU */
+    #mobile-nav {
+        width: 100vw;
+        height: 160px;
+        background-color: rgba(53, 53, 53, 0.76);
+        position: absolute;
+        top: 80px;
+        display: none;
+    }
+
+    #mobile-nav ul {
+        margin: auto;
+        padding: 0;
+        list-style-type: none;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    #mobile-nav ul li {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: block;
+        color: white;
+        width: 100%;
+        font-size: 2.0em;
+        align-content: space-around;
+    }
+
+    #mobile-nav ul li:hover {
+        background-color: white;
+        color: black;
+        border-radius: 2px;
+        cursor: pointer
+    }
+
+
+
+    .progress-container-mobile {
+        width: 100%;
+        height: 8px;
+        background: rgba(66, 66, 66, 0);
+        position: absolute;
+        bottom: 0;
+    }
+
+    .progress-bar-mobile {
+        margin-top:4px;
+        height: 4px;
+        background-color: white;
+        width: 0%;
+    }
+
+    /* CARD CHANGING FLEX DIRECTION ON MOBILE */
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    .contact-icons{
+        display:none
+    }
+
+    .contact-icons-mobile{
+        display:block;
+        background-color: rgba(128, 128, 128, 0);
+        width:100% ;
+        border:none;
+        display:flex;
+        flex-direction: row;
+        align-self:center;
+
+    }
+    .contact-pictures{
+        height:50px;
+        width:50px;
+        margin:auto;
+    }
+
+
+}
